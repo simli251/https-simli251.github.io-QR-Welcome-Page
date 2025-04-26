@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .welcome {
+            opacity: 0;
+            font-size: 2em;
+            font-weight: bold;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="welcome">Welcome to our Home!</h1>
+
+    <!-- Autoplay Welcome Audio -->
+    <audio autoplay>
+        <source src="welcome.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Auto-Redirect After Message Plays -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://maps.app.goo.gl/NMfDEWtXvvQ3iaas8";
+        }, 5000);
+    </script>
+</body>
+</html>
